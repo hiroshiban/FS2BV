@@ -402,10 +402,9 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 # <a name = "Citation"> **Citation of the FS2BV toolbox** </a>
 
-**IMPORTANT**  
-
-**If you use some of the imported VOIs in your studies, please cite the original authors' papers and the software packages rather than citing the FS2BV tool.**  
-
+<br></br>
+**IMPORTANT: If you use some of the imported VOIs in your studies, please cite the original authors' papers and the software packages rather than citing the FS2BV tool.**  
+<br></br>
 Even after that, if you still have some space in your reference section, please cite this GitHub repository like,  
 
 **FS2BV toolbox: [https://github.com/hiroshiban/FS2BV](https://github.com/hiroshiban/FS2BV)**  
