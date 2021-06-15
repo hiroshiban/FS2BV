@@ -109,7 +109,8 @@ The **ImportFreeSurfer2BrainVoyager** function especially uses
 2. **ConvertFreeSurferSurf2SRF** for importing surface files as SRFs  
 3. **ConvertFreeSurferParcellation2BVvoi** for importing volume ROI files as VOIs  
 4. **ConvertFreeSurferAnnotation2BVpoi** for importing surface ROI files as POIs  
-So please just call the function on MATLAB shell.  
+
+So please just call **ImportFreeSurfer2BrainVoyager** on MATLAB shell.  
 
 **usage**
 
