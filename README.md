@@ -36,7 +36,7 @@
 
 # <a name = "Introduction"> **Introduction – what is FS2BV ?** </a>
 
-The FS2BV toolbox is a collection of **MATLAB** functions for importing FreeSurfer anatomy volumes, cortical surfaces, and ROIs () to BrainVoyager (BrainInnovation, Inc) as VMR, SRF, VOI, POI files (this toolbox is a part of our in-house BrainVoyager extensions. if some files are missing, I will add them to the repository asap). Some SPM/FSL ROI files can be also imported to BrainVoyager using the toolbox. Furthermore, BrainVoyager POIs can be exported as FreeSurfer Annotation files.For more details, please see the comments in each of the functions. Please also see VOI snapshots in ~/FS2BV/images.  
+The FS2BV toolbox is a collection of **MATLAB** functions for importing FreeSurfer anatomy volumes, cortical surfaces, and ROIs to BrainVoyager (BrainInnovation, Inc) as VMR, SRF, VOI, POI files (this toolbox is a part of our in-house BrainVoyager extensions. if some files are missing, I will add them to the repository asap). Some SPM/FSL ROI files can be also imported to BrainVoyager using the toolbox. Furthermore, BrainVoyager POIs can be exported as FreeSurfer Annotation files.For more details, please see the comments in each of the functions. Please also see VOI snapshots in ~/FS2BV/images.  
 
 ![FreeSurfer VOI](images/FS2BV_01.png)     ![FreeSurfer POI](images/FS2BV_02.png)
 
