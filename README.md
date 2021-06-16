@@ -11,7 +11,7 @@
 - [System requirements](#System)
 - [How to use FS2BV](#Manual)
   - [Importing FreeSurfer volume, surface, ROIs](#Freesurfer)
-  - [The other VOIs (the original ROI files are required to download separately)](#VOIs)
+  - [The other VOIs (the original ROI files are required to be downloaded separately)](#VOIs)
     - [Automated Anatomical Labeling (AAL 1/2/3)](#AAL)
     - [BAA OR](#BAA)
     - [Brainnetome Atlas](#Brainnetome)
@@ -26,6 +26,7 @@
     - [Shenparcel](#ShenParcel)
     - [Spheric VOIs](#Spheric)
     - [Talairach](#Talairach)
+  - [Importing FreeSurfer segmentation into BrainVoyager](#Segmentation)
   - [The other tools in the toolbox](#Miscs)
 - [Acknowledgments](#Acknowledgments)
 - [License](#License)
@@ -98,7 +99,7 @@ ConvertBVpoi2FreeSurferAnnotation   : Converts BrainVoyager POIs to FreeSurfer A
                                       generate label or volume ROI files from the generated annotation files using
                                       FreeSurfer commands.
 
-For searching VOIs in specific XYZ coords in TAL/MNI, please use
+To find the VOIs in specific XYZs of TAL/MNI coords, please use the function below,
 GetAreaNameFromAtlasVOI             : Returns area candidates, in which the input XYZ coordinate(s)
                                       is(are) belonging to, based on the pre-defined VOI atlases.
 </pre>
@@ -156,7 +157,7 @@ fs_subj_dir/BrainVoyager/(subj_name)/{vmr|srf|voi|poi}/*.{vmr|srf|voi|poi}
 
 [back to the menu](#Menu)
 
-# <a name = "VOIs"> **The other VOIs (the original ROI files are required to download separately)** </a>
+# <a name = "VOIs"> **The other VOIs (the original ROI files are required to be downloaded separately)** </a>
 
 The FS2BV toolbox can also import the other ROI files defined for SPM and FSL into BrainVoyager. For importing, you can use one of  
 
@@ -362,6 +363,82 @@ Importing the ROI files listed below were already tested. For details, please se
 </pre>
 
 ![Yeo](images/Yeo_JNeurophysiol11_MNI152_VOIs.png)  
+
+[back to the menu](#Menu)
+
+# <a name = "Segmentation"> **Importing FreeSurfer segmentation into BrainVoyager** </a>
+
+You can also import the FreeSurfer recon_all's segmentation output (ribbon.mgz, wm.seg.mgz etc) into BrainVoygaer for masking VMR anatomy files.  
+Please use one of these functions.  
+
+<pre>
+MaskVMRbyFreeSurferSegmentation     : for general masking purposes. Any *.mgz segmentation result can be used as a
+                                      mask (by default, the parameters are tuned to process wm.seg.mgz as a mask)
+MaskVMRbyFreeSurferSegmentation_ribbon: Specific for applying a mask using the white (and gray) matter segmentation
+                                      result in ribbon.mgz.
+                                      Generally, for surface reconstructions, MaskVMRbyFreeSurferSegmentation_ribbon
+                                      gives the better results.
+</pre>
+
+**Procedures of masking a VMR using FreeSurfer files**
+
+The steps required to mask the BrainVoyager VMR anatomy file with the FreeSurfer output, such as ribbon.mgz are as below.
+1. Adjusting contrast and brightness of the ribbon.mgz so that the mean grayscale value of the white matter region is around 180.  
+2. Transforming from the default FreeSurfer coordinate into the BrainVoyager SAG coordinate, and generating ribbon.vmr.  
+3. Coregistration of FreeSurfer segmentation VMR to the input BrainVoyager VMR.  
+   Note: Even when you are using exactly the same anatomy volume datasets, this coregistration step is required since FreeSurfer seems to adjut the orgin (center) of the volume in segmentation procedure. Therefore, the imported FreeSurfer VMR and the corresponding BrainVoyager VMR are displaced.  
+4. (Finally) Masking the white (and gray) matter region of the target VMR with the FreeSurfer segmentation file.
+
+**Step 00: preparation**
+
+Firstly, before running the function, please organize data structgure: Please copy FreeSurfer wm.seg.mgz and ribbon.mgz to the same directory where the target VMR anatomy file you are going to mask is placed. Here, as an example, let's assume that we are having  
+
+In the directory, ~/fMRI_data/HB/3d/ (a relative-path format)
+1. hb21_001.3d_ACPC.vmr -- BrainVoyager anatomy file, ACPC file is recommended while the native-space VMR is also accepted.
+2. wm.seg.mgz -- segmented white matter, used for the coregistration, originally stored as $FREESURFER_SUBJECT_DIR/(subj)/mri/wm.seg.mgz
+2. ribbon.mgz -- segmented gray/white matters, used for the masking, originally stored as $FREESURFER_SUBJECT_DIR/(subj)/mri/ribbon.mgz
+
+**Step 01: run the function, MaskVMRbyFreeSurferSegmentation_ribbon**
+
+Then, on the MATLAB shell, please run the command below.
+```MATLAB
+>> % please specify all the input variables in the relative path format
+>> % usage: MaskVMRbyFreeSurferSegmentation_ribbon(vmr_file,:freesurfer_ribbon_file,...
+>> %              :freesurfer_wm_seg_file,:include_gray_flg,:flip_flg,:vmr_framingcube)
+>> % (: is optional)
+>> % note: if empty value is set to ribbon_file and wm_seg_file, the function tries to find
+>> % them in the target vmr_file directory.
+>>
+>> MaskVMRbyFreeSurferSegmentation_ribbon('/fMRI_data/HB/3d/hb21_001.3d_ACPC.vmr',[],[],1,1,256);
+>> % then, please follow the instructions of the function
+```
+**Step 02: coregistration of FreeSurfer wm.seg.vmr to the target BrainVoyager VMR file**
+
+In the middle of the **MaskVMRbyFreeSurferSegmentation_ribbon** processing, the function asks to coregist the wm.seg.vmr (wm.seg.mgz is converted to wm.seg.vmr and stored in the same directory with wm.seg.mgz by the function) to the target BrainVoyager VMR (e.g. hb21_001.3d_ACPC.vmr). At this stage, the MATLAB shell turns to the "waiting" mode. Then, please just leave the MATLAB shell as it is, follow the procedures below,
+
+1. Please launch BrainVoyager.
+2. Please load wm.seg.vmr (not wm.seg.), which is to be coregistered.
+3. Please select "Volumes" --> "3D volume tools" --> "Coregitration" tab --> "VMR-VMR coregistration" --> "Select VMR."
+   Then, please select the target hb21_001.3d_ACPC.vmr as the destination anatomy.
+4. Please run the coregistration by selecting "Volumes" --> "3D volume tools" --> "Coregitration" tab --> "VMR-VMR coregistration" --> "Align."
+5. You will get the transformation file, like "wm.seg-TO-hb21_001.3d_ACPC.trf"
+
+![Coregistration](images/Freesurfer_coregistration_wm_seg.png)  
+
+After these steps, please go back to the MATLAB shell and please press "F5" or please type
+```MATLAB
+>> dbcont
+```
+to proceed. Then, the rest of the procedures will be automatically carried on and you will get the final output, **hb21_001.3d_ACPC_masked.vmr.**
+
+**Step 03: Segmentation in BrainVoyager**
+
+For the masked VMR, **hb21_001.3d_ACPC_masked.vmr**, you can apply the BrainVoyager's standard segmentation and cortical reconstruction processing. The segmentation performance may be improved in some cases. If you need to apply TAL/MNI transformation, please apply it before the cortical reconstruction (in transformation, any interpolation would work finely).  
+
+![Masking](images/Freesurfer_masked_VMR.png)  
+
+<br></br>
+Finally, if you want to simply import the FreeSurfer segmentation results, including the cortical surface reconstructed in FreeSurfer, without changing any vertex IDs etc (this matching is sometimes required, for instance, in exporting BrainVoyager-defined POI to FreeSurfer Annotation etc.), please use **ImportFreeSurfer2BrainVoyager**, rather than importing only the wm.seg.mgz and ribbon.mgz files. For details, please see the [Importing FreeSurfer volume, surface, ROIs](#FreeSurfer) section.
 
 [back to the menu](#Menu)
 

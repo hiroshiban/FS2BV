@@ -40,7 +40,7 @@ function ImportFreeSurfer2BrainVoyager(fs_subj_dir,do_flg)
 %                                       FreeSurfer commands.
 %
 % Some of the VOIs defined in TAL/MNI spaces are already stored in ~/BVQX_hbtools/VOIs.
-% To find the VOIs in specific XYZ of TAL/MNI coords, please use the function below,
+% To find the VOIs in specific XYZs of TAL/MNI coords, please use the function below,
 % GetAreaNameFromAtlasVOI               : Returns area candidates, in which the input XYZ coordinate(s)
 %                                        is(are) belonging to, based on the pre-defined VOI atlases.
 %
@@ -93,7 +93,7 @@ function ImportFreeSurfer2BrainVoyager(fs_subj_dir,do_flg)
 %
 %
 % Created    : "2017-09-11 18:40:01 ban"
-% Last Update: "2021-06-15 23:37:44 ban"
+% Last Update: "2021-06-16 10:01:52 ban"
 
 %% check the input variables
 if nargin<1, help(mfilename()); return; end

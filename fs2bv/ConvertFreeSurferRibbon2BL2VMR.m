@@ -64,7 +64,7 @@ function vmr=ConvertFreeSurferRibbon2BL2VMR(ribbon_file,VMR_coregistration_file,
 %                                       FreeSurfer commands.
 %
 % Some of the VOIs defined in TAL/MNI spaces are already stored in ~/BVQX_hbtools/VOIs.
-% To find the VOIs in which specific XYZ coordinates in TAL/MNI space, please use the function below,
+% To find the VOIs in specific XYZs of TAL/MNI coords, please use the function below,
 % GetAreaNameFromAtlasVOI               : Returns area candidates, in which the input XYZ coordinate(s)
 %                                        is(are) belonging to, based on the pre-defined VOI atlases.
 %
@@ -125,7 +125,7 @@ function vmr=ConvertFreeSurferRibbon2BL2VMR(ribbon_file,VMR_coregistration_file,
 %
 %
 % Created    : "2017-09-14 11:08:28 ban"
-% Last Update: "2018-06-09 17:20:46 ban"
+% Last Update: "2021-06-16 10:02:40 ban"
 
 %% check the input variables
 if nargin<1, help(mfilename()); return; end

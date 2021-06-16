@@ -32,7 +32,7 @@ function nii=ExtractFSLroiDirect(NII_dir,extracting_values,ROI_name,prefix_nii,s
 %                                       FreeSurfer commands.
 %
 % Some of the VOIs defined in TAL/MNI spaces are already stored in ~/BVQX_hbtools/VOIs.
-% To find the VOIs in which specific XYZ coordinates in TAL/MNI space, please use the function below,
+% To find the VOIs in specific XYZs of TAL/MNI coords, please use the function below,
 % GetAreaNameFromAtlasVOI               : Returns area candidates, in which the input XYZ coordinate(s)
 %                                        is(are) belonging to, based on the pre-defined VOI atlases.
 %
@@ -103,7 +103,7 @@ function nii=ExtractFSLroiDirect(NII_dir,extracting_values,ROI_name,prefix_nii,s
 %
 %
 % Created    : "2015-12-26 11:03:16 ban"
-% Last Update: "2018-06-09 17:19:18 ban"
+% Last Update: "2021-06-16 10:02:36 ban"
 
 % check the input variables
 if nargin<3, help(mfilename()); return; end

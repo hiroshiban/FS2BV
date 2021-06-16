@@ -32,7 +32,7 @@ function [voi,voi_voxels,nii]=ConvertNiftiRoi2BVvoi_Labels(NII_dir,labels,input_
 %                                       FreeSurfer commands.
 %
 % Some of the VOIs defined in TAL/MNI spaces are already stored in ~/BVQX_hbtools/VOIs.
-% To find the VOIs in which specific XYZ coordinates in TAL/MNI space, please use the function below,
+% To find the VOIs in specific XYZs of TAL/MNI coords, please use the function below,
 % GetAreaNameFromAtlasVOI               : Returns area candidates, in which the input XYZ coordinate(s)
 %                                        is(are) belonging to, based on the pre-defined VOI atlases.
 %
@@ -99,7 +99,7 @@ function [voi,voi_voxels,nii]=ConvertNiftiRoi2BVvoi_Labels(NII_dir,labels,input_
 %
 %
 % Created    : "2017-08-28 17:52:09 ban"
-% Last Update: "2018-08-27 15:37:29 ban"
+% Last Update: "2021-06-16 10:02:39 ban"
 
 % check the input variables
 if nargin<2, help(mfilename()); return; end

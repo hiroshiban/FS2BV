@@ -2,7 +2,7 @@
 README.txt on importing FreeSurfer files into BrainVoyager
 
 Created    : "2017-08-27 16:24:46 ban"
-Last Update: "2017-10-04 13:17:18 ban"
+Last Update: "2021-06-16 10:06:50 ban"
 **************************************************
 
 To import FreeSurfer recon_all's outputs (individual auto segmentation results e.g. *.mgz) into BrainVoyager,
@@ -41,7 +41,7 @@ Please also try these functions if you are interested.
 - ConvertSPMroi2BVvoi             : Converts SPM NII ROIs to BrainVoyager VOIs
 - ConvertsAALroi2BVvoi            : Converts SPM AAL antomical tempolate (NII) ROIs to BrainVoyager VOIs
 
-To find the VOIs in which specific XYZ coordinates in TAL/MNI space, please use the function below,
+To find the VOIs in specific XYZs of TAL/MNI coords, please use the function below,
 
 - GetAreaNameFromAtlasVOI         : Returns area candidates, in which the input XYZ coordinate(s)
                                     is(are) belonging to, based on the pre-defined VOI atlases.
