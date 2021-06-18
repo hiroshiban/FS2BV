@@ -453,7 +453,7 @@ COMING SOON...
 
 # <a name = "Acknowledgments"> **Acknowledgments** </a>
 
-The FS2BV toolbox were developed to import ROIs defined for FreeSurfer/SPM/FSL on BrainVoyager to compare our fMRI results with the other studies.  
+The FS2BV toolbox has been developed to import ROIs defined for FreeSurfer/SPM/FSL on BrainVoyager to compare our fMRI results with the other studies.  
 We would like to express our deepest gratitude to all the researchers who made their own findings as the ROIs available to the public free of charge.
 Also, the core of the tool were built on the great MATLAB tool to handle BrainVoyager data, BVQX_tools. For details, please see the links below. We also express our gratitude to the developers of the tool.
 
