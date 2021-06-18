@@ -434,7 +434,7 @@ to proceed. Then, the rest of the procedures will be automatically carried on an
 
 **Step 03: Segmentation in BrainVoyager**
 
-For the masked VMR, **hb21_001.3d_ACPC_masked.vmr**, you can apply the BrainVoyager's standard segmentation and cortical reconstruction processing. The segmentation performance may be improved in some cases. If you need to apply TAL/MNI transformation, please apply it before the cortical reconstruction (in transformation, any interpolation would work finely).  
+For the masked VMR, **hb21_001.3d_ACPC_masked.vmr**, you can apply the BrainVoyager's standard segmentation and cortical reconstruction processing. The segmentation performance may be improved in some cases. If you need to apply TAL/MNI transformation, please apply it before the cortical reconstruction (in transformation, any interpolation (nearest-neighbor, trilinear interpolation, etc) would work finely).  
 
 ![Masking](images/Freesurfer_masked_VMR.png)  
 
