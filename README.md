@@ -2,36 +2,39 @@
 # **README on FS2BV**
 
 <div>Created    : "2010-09-11 18:40:01 ban"</div>
-<div>Last Update: "2021-06-14 15:01:32 ban"
+<div>Last Update: "2021-06-18 16:48:25 ban"
 
 **********
 # <a name = "Menu"> **Menu** </a>
 
-- [Introduction – what is FS2BV ?](#Introduction)
-- [System requirements](#System)
-- [How to use FS2BV](#Manual)
-  - [Importing FreeSurfer volume, surface, ROIs](#Freesurfer)
-  - [The other VOIs (the original ROI files are required to be downloaded separately)](#VOIs)
-    - [Automated Anatomical Labeling (AAL 1/2/3)](#AAL)
-    - [BAA OR](#BAA)
-    - [Brainnetome Atlas](#Brainnetome)
-    - [Brodmann](#Brodmann)
-    - [Buckner JNeurophysiol11 MNI152](#Buckner)
-    - [Choi JNeurophysiol12 MNI152](#Choi)
-    - [CONN](#CONN)
-    - [FreeSurfer autosegmentation](#FSauto)
-    - [FSL](#FSL)
-    - [MT](#MT)
-    - [ProbAtlas v4](#ProbAtlas)
-    - [Shenparcel](#ShenParcel)
-    - [Spheric VOIs](#Spheric)
-    - [Talairach](#Talairach)
-  - [Importing FreeSurfer segmentation into BrainVoyager](#Segmentation)
-  - [The other tools in the toolbox](#Miscs)
-- [Acknowledgments](#Acknowledgments)
-- [License](#License)
-- [Citation of the FS2BV toolbox](#Citation)
-- [TODOs](#TODO)
+- [**README on FS2BV**](#readme-on-fs2bv)
+- [<a name = "Menu"> **Menu** </a>](#-menu-)
+- [<a name = "Introduction"> **Introduction – what is FS2BV ?** </a>](#-introduction--what-is-fs2bv--)
+- [<a name = "System"> **System requirements** </a>](#-system-requirements-)
+- [<a name = "Manual"> **How to use FS2BV** </a>](#-how-to-use-fs2bv-)
+- [<a name = "Freesurfer"> **Importing FreeSurfer volume, surface, ROIs** </a>](#-importing-freesurfer-volume-surface-rois-)
+- [<a name = "VOIs"> **The other VOIs (the original ROI files are required to be downloaded separately)** </a>](#-the-other-vois-the-original-roi-files-are-required-to-be-downloaded-separately-)
+- [<a name = "AAL"> Automated Anatomical Labeling (AAL 1/2/3) </a>](#-automated-anatomical-labeling-aal-123-)
+- [<a name = "BAA"> BAA OR </a>](#-baa-or-)
+- [<a name = "Brainnetome"> Brainnetome Atlas </a>](#-brainnetome-atlas-)
+- [<a name = "Brodmann"> Brodmann Atlas </a>](#-brodmann-atlas-)
+- [<a name = "Buckner"> Buckner JNeurophysiol11 MNI152 </a>](#-buckner-jneurophysiol11-mni152-)
+- [<a name = "Choi"> Choi JNeurophysiol12 MNI152 </a>](#-choi-jneurophysiol12-mni152-)
+- [<a name = "CONN"> CONN </a>](#-conn-)
+- [<a name = "FSauto"> FreeSurfer autosegmentation </a>](#-freesurfer-autosegmentation-)
+- [<a name = "FSL"> FSL Atlas </a>](#-fsl-atlas-)
+- [<a name = "MT"> MT Atlas </a>](#-mt-atlas-)
+- [<a name = "ProbAtlas"> ProbAtlas v4 </a>](#-probatlas-v4-)
+- [<a name = "Shenparcel"> Shenparcel </a>](#-shenparcel-)
+- [<a name = "Spheric"> Spheric VOIs </a>](#-spheric-vois-)
+- [<a name = "Talairach"> Talairach.org </a>](#-talairachorg-)
+- [<a name = "Yeo"> Yeo JNeurophysiol11 MNI152 </a>](#-yeo-jneurophysiol11-mni152-)
+- [<a name = "Segmentation"> **Importing FreeSurfer segmentation into BrainVoyager** </a>](#-importing-freesurfer-segmentation-into-brainvoyager-)
+- [<a name = "Miscs"> **The other tools in the toolbox** </a>](#-the-other-tools-in-the-toolbox-)
+- [<a name = "Acknowledgments"> **Acknowledgments** </a>](#-acknowledgments-)
+- [<a name = "License"> **License** </a>](#-license-)
+- [<a name = "Citation"> **Citation of the FS2BV toolbox** </a>](#-citation-of-the-fs2bv-toolbox-)
+- [<a name = "TODO"> **TODOs** </a>](#-todos-)
 
 **********
 
@@ -436,6 +439,8 @@ to proceed. Then, the rest of the procedures will be automatically carried on an
 For the masked VMR, **hb21_001.3d_ACPC_masked.vmr**, you can apply the BrainVoyager's standard segmentation and cortical reconstruction processing. The segmentation performance may be improved in some cases. If you need to apply TAL/MNI transformation, please apply it before the cortical reconstruction (in transformation, any interpolation would work finely).  
 
 ![Masking](images/Freesurfer_masked_VMR.png)  
+
+![Masking](images/Freesurfer_cortical_reconstruction.png)  
 
 <br></br>
 Finally, if you want to simply import the FreeSurfer segmentation results, including the cortical surface reconstructed in FreeSurfer, without changing any vertex IDs etc (this matching is sometimes required, for instance, in exporting BrainVoyager-defined POI to FreeSurfer Annotation etc.), please use **ImportFreeSurfer2BrainVoyager**, rather than importing only the wm.seg.mgz and ribbon.mgz files. For details, please see the [Importing FreeSurfer volume, surface, ROIs](#FreeSurfer) section.
