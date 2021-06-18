@@ -2,12 +2,11 @@
 # **README on FS2BV**
 
 <div>Created    : "2010-09-11 18:40:01 ban"</div>
-<div>Last Update: "2021-06-18 17:05:56 ban"
+<div>Last Update: "2021-06-18 17:17:39 ban"
 
 **********
 # <a name = "Menu"> **Menu** </a>
 
-- [**Menu**](#-menu-)
 - [**Introduction – what is FS2BV ?**](#Introduction)
 - [**System requirements**](#System)
 - [**How to use FS2BV**](#Manual)
