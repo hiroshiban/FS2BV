@@ -498,7 +498,7 @@ If you have no space, please cite it somewhere someday next time. Thank you so m
 
 # <a name = "TODO"> **TODOs** </a>
 
-1. Adding some more converstion scripts.
+1. Adding some more VOI conversion scripts.
 2. Compiling *.m files using the MATLAB compiler so that we can provide a standalone verion of the FS2BV package.
 3. Make the tool be compatible with NeuroElf as well as BVQX_tools.
 
