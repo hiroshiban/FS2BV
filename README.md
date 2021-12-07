@@ -2,7 +2,7 @@
 # **README on FS2BV**
 
 <div>Created    : "2010-09-11 18:40:01 ban"</div>
-<div>Last Update: "2021-06-18 17:17:39 ban"
+<div>Last Update: "2021-12-07 17:49:33 ban"
 
 **********
 # <a name = "Menu"> **Menu** </a>
@@ -39,6 +39,8 @@
 # <a name = "Introduction"> **Introduction – what is FS2BV ?** </a>
 
 The FS2BV toolbox is a collection of **MATLAB** functions for importing FreeSurfer anatomy volumes, cortical surfaces, and ROIs to BrainVoyager (BrainInnovation, Inc) as VMR, SRF, VOI, POI files (this toolbox is a part of our in-house BrainVoyager extensions. if some files are missing, I will add them to the repository asap). Some SPM/FSL ROI files can be also imported to BrainVoyager using the toolbox. Furthermore, BrainVoyager POIs can be exported as FreeSurfer Annotation files.For more details, please see the comments in each of the functions. Please also see VOI snapshots in ~/FS2BV/images.  
+
+***The package is made publicly available in the hope of keeping our research group being transparent and open. Furthermore, the package is made open also for people who want to know our group's research activities, who want to join our group in the near future. Please feel free to contact us if you are interested in our research projects.***  
 
 ![FreeSurfer VOI](images/FS2BV_01.png)     ![FreeSurfer POI](images/FS2BV_02.png)
 
@@ -485,7 +487,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 # <a name = "Citation"> **Citation of the FS2BV toolbox** </a>
 
 <br></br>
-**IMPORTANT: If you use some of the imported VOIs in your studies, please cite the original authors' papers and the software packages rather than citing the FS2BV tool.**  
+**IMPORTANT: If you use some of the imported VOIs in your studies, please put the first priority to cite the original authors' papers and the software packages rather than citing the FS2BV tool.**  
 <br></br>
 Even after that, if you still have some space in your reference section, please cite this GitHub repository like,  
 
