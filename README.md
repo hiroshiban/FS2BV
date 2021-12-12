@@ -1,10 +1,21 @@
-
 # **README on FS2BV**
 
-<div>Created    : "2010-09-11 18:40:01 ban"</div>
-<div>Last Update: "2021-12-08 05:40:07 ban"
+<div align="right">
+Created    : "2010-09-11 18:40:01 ban"<br>
+Last Update: "2021-12-13 05:45:10 ban"
+</div>
 
-**********
+<br>
+<div align="center">
+<img src="https://img.shields.io/badge/LANGUAGE-MATLAB-brightgreen" />
+<img src="https://img.shields.io/badge/EDITED%20BY-EmEditor%20&%20VS%20Code-blue" />
+<img src="https://img.shields.io/badge/LICENSE-BSD-red" /><br>
+<img src="https://img.shields.io/badge/KEYWORDS-Vision%20Science,%203D,%20Stereo,%20Binocular,%20Perception,%20Receognition,%20fMRI,%20MEG,%20EEG,%20&%20Psychphysics-blue?style=social&logo=webauthn" /><br>
+<img src="https://img.shields.io/badge/CONTACT-lightgrey" /> <img src="images/ban_hiroshi_address.png" />
+</div>
+<br>
+
+***
 # <a name = "Menu"> **Menu** </a>
 
 - [**Introduction – what is FS2BV ?**](#Introduction)
@@ -60,8 +71,9 @@ BrainVoyager [***BrainInnovation*** ](https://www.brainvoyager.com/)
   - UNIX command line tools: some utilitiess like gzip are required to extract *.nii.gz files etc. If you want to use the FS2BV toolbox functions on Windows, please additionally install UNIX command emulator, Cygwin or MSYS2, or a standalone gzip executable etc, and set the envitonmental path to the tools in advance.
   - **BrainVoyager's MATLAB tools, BVQX_tools**: BVQX_tools_08d is recommended. NeuroElf may be compatible but not tested.  
     ref: [**neuroelf**](https://neuroelf.net/)
-  - **freesurfer_matlab_tools**: Matlab tools to read/write FreeSurfer files. In this toolbox, a small madified version of the tools is attached.  
-    ref: [**FreeSurfer matlab_tools**](https://github.com/freesurfer/freesurfer/tree/dev/matlab)
+  - **freesurfer_matlab_tools**: Matlab tools to read/write FreeSurfer files. In this toolbox, a bit modified version of the functions are included so that they are compatible with Windows OS.  
+    ref: [**FreeSurfer matlab_tools**](https://github.com/freesurfer/freesurfer/tree/dev/matlab)  
+    Please also read [LICENSE_on_freesurfer_matlab_tools.txt](LICENSE_on_freesurfer_matlab_tools.txt).  
   - **geom3d**: a library to handle and visualize 3D geometric primitives such as points, lines, planes, polyhedra... It provides low-level functions for manipulating 3D geometric primitives, making easier the development of more complex geometric algorithms.  
     ref: [**geom3d**](https://www.mathworks.com/matlabcentral/fileexchange/24484-geom3d)
 
@@ -469,8 +481,11 @@ Also, the core of the tool were built on the great MATLAB tool to handle BrainVo
 
 # <a name = "License"> **License** </a>
 
-FS2BV --- MATLAB tools for importing FreeSurfer anatomy volumes and cortical surfaces, and FreeSurfer/SPM/FSL ROIs into BrainVoyager  
-Copyright (c) 2021, Hiroshi Ban, All rights reserved.  
+<img src="https://img.shields.io/badge/LICENSE-BSD-red" /><br>
+
+**The toolbox is distributed under the BSD license described below.**  
+
+FS2BV --- MATLAB tools for importing FreeSurfer anatomy volumes and cortical surfaces, and FreeSurfer/SPM/FSL ROIs into BrainVoyager. Copyright (c) 2021, Hiroshi Ban, All rights reserved.  
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
 
@@ -480,7 +495,13 @@ Redistribution and use in source and binary forms, with or without modification,
       notice, this list of conditions and the following disclaimer in
       the documentation and/or other materials provided with the distribution
 
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.  
+
+The views and conclusions contained in the software and documentation are those of the authors and should not be interpreted as representing official policies, either expressed or implied, of the FreeBSD Project.  
+
+**Please also read the license terms on**  
+1. **freesurfer_matlab_tools: [LICENSE_on_freesurfer_matlab_tools.txt](LICENSE_on_freesurfer_matlab_tools.txt).**  
+2. **geom3d tool: [license.txt](fs2bv/geom3d/license.txt)**  
 
 [back to the menu](#Menu)
 
