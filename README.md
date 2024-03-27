@@ -2,7 +2,7 @@
 
 <div align="right">
 Created    : "2010-09-11 18:40:01 ban"<br>
-Last Update: "2021-12-13 07:27:48 ban"
+Last Update: "2024-03-27 21:24:43 ban"
 </div>
 
 <br>
@@ -32,6 +32,7 @@ Last Update: "2021-12-13 07:27:48 ban"
   - [CONN](#CONN)
   - [FreeSurfer autosegmentation](#FSauto)
   - [FSL Atlas](#FSL)
+  - [HCP-MMP1 Atlas](#HCPMMP1)
   - [MT Atlas](#MT)
   - [ProbAtlas v4](#ProbAtlas)
   - [Shenparcel](#Shenparcel)
@@ -303,6 +304,18 @@ Importing the ROI files listed below were already tested. For details, please se
 </pre>
 
 ![FSL](images/FSL_atlases_VOIs.png)  
+
+[back to the menu](#Menu)
+
+# <a name = "HCPMMP1"> HCP-MMP1 Atlas </a>
+
+<pre>
+  about : The Human Connectome Project MMP1 atlas
+  ref   : https://osf.io/azup8
+  script: ~/FS2BV/VOIs/HCP_MMP1_VOIs/script_HCP_MMP1_conversion.m
+</pre>
+
+![HCP_MMP1](images/HCP-MMP1_VOIs.png)  
 
 [back to the menu](#Menu)
 
