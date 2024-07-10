@@ -2,7 +2,7 @@
 
 <div align="right">
 Created    : "2010-09-11 18:40:01 ban"<br>
-Last Update: "2024-03-27 21:24:43 ban"
+Last Update: "2024-07-10 10:57:26 ban"
 </div>
 
 <br>
@@ -312,7 +312,7 @@ Importing the ROI files listed below were already tested. For details, please se
 <pre>
   about : The Human Connectome Project MMP1 atlas
   ref   : https://osf.io/azup8
-  script: ~/FS2BV/VOIs/HCP_MMP1_VOIs/script_HCP_MMP1_conversion.m
+  script: ~/FS2BV/VOIs/HCP_MMP1_VOIs/script_convert_HCP_MMP1_to_VOI.m
 </pre>
 
 ![HCP_MMP1](images/HCP-MMP1_VOIs.png)  
